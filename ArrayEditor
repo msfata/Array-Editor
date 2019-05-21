@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author msfata ProgrammingHelp
+ *
+ */
+public class ArrayEditor {
+
+	private static List<Integer> edit(int[] array) {
+		List<Integer> list = new ArrayList<Integer>();
+		for (int i : array) {
+			if (i == 0 || i > 3) {
+				continue;
+			} else {
+				list.add(i);
+			}
+		}
+		return list;
+	}
+
+	public static void main(String[] args) {
+		int[] oreginalArray = { 1, 2, 0, 3, 4, 5, 0, 6 };
+		List<Integer> resultList = edit(oreginalArray);
+		for (Integer integer : resultList) {
+			System.out.print(integer + " ,");
+		}
+	}
+}
